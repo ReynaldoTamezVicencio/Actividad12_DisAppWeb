@@ -16,3 +16,6 @@ Vicencio - Ingeniería en Desarrollo de Software
 
 ## Enlace al proyecto
 https://github.com/TU_USUARIO/ChuckJokesVue
+
+## Actualización
+Se actualizó para la Tarea 10

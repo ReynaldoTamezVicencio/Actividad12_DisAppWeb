@@ -2,20 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chuck Norris Jokes</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <title>Chuck Norris Cards</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-  <div id="app">
-    <h1>Frases de Chuck Norris</h1>
-    <ul>
-      <li v-for="(joke, index) in chuck" :key="index">
-        {{ joke.value }}
-      </li>
-    </ul>
+  <div id="app" class="container mt-4">
+    <h1 class="text-center text-danger mb-4">Frases de Chuck Norris</h1>
+    <div class="row">
+      <chuck-card
+        v-for="(joke, index) in chuck"
+        :key="index"
+        :icon_url="joke.icon_url"
+        :value="joke.value"
+      ></chuck-card>
+    </div>
   </div>
+
+  <script src="components/chuck-card.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
+
